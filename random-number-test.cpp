@@ -1,11 +1,22 @@
 #include <iostream>
+#include <cstdlib>
 
 using namespace std;
 
 int main(){
 
-    int random;
-    random = rand();
+    srand((unsigned) time(NULL));
 
-    cout<<random<<endl;
+    int random;
+
+    for(int i=1; i<=5; i++){
+
+        random = rand() % 10;
+
+        cout<<random<<endl;
+    }
+   
+    system("pause");
+
+    return 0;
 }
